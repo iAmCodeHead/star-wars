@@ -38,7 +38,6 @@ class App {
                     type: 'postgres',
                     url: DATABASE_URL,
                     synchronize: false,
-                    ssl: true,
                     migrations: ['/src/db/migrations/*.ts'],
                     entities: [__dirname + '/api/**/*Model.js'],
                 });
