@@ -6,8 +6,8 @@ export class MoviesService {
     public getAllStarWarsMovies = async (): Promise<IMovies[]> => {
         
         try {
-            
-            let allMovies = await axios.get('https://swapi.dev/api/films');
+
+            let allMovies = await axios.get('https://swapi.dev/api/films/');
 
             return allMovies.data.results || [];   
 
