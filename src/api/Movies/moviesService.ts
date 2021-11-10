@@ -5,10 +5,17 @@ export class MoviesService {
 
     public getAllStarWarsMovies = async (): Promise<IMovies[]> => {
         
-        let allMovies = await axios.get('https://swapi.dev/api/films');
+        try {
+            
+            let allMovies = await axios.get('https://swapi.dev/api/films');
 
-        return allMovies.data.results || [];
-        
+            return allMovies.data.results || [];   
+
+        } catch (error) {
+
+            return;
+
+        }
 
     }
 
@@ -22,7 +29,7 @@ export class MoviesService {
 
         } catch (error) {
 
-            if(error.response.status == 404) return;
+            return;
             
         }
         
