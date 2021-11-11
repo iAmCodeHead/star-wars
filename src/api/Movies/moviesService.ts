@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { IMovies } from './moviesInterface';
 
 export class MoviesService {
 
-    public getAllStarWarsMovies = async (): Promise<IMovies[]> => {
+    public getAllStarWarsMovies = async () => {
         
         try {
 
@@ -19,7 +18,7 @@ export class MoviesService {
 
     }
 
-    public getAStarWarsMovie = async (id: number): Promise<IMovies> => {
+    public getAStarWarsMovie = async (id: number) => {
 
         try {
          
